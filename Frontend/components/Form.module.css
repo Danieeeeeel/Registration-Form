@@ -1,0 +1,253 @@
+.bubbles {
+  position: relative;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: top center;
+  }
+.containers
+  :is(
+    .bubbles1,
+    .bubbles2,
+    .bubbles3,
+    .bubbles4,
+    .bubbles5,
+    .bubbles6,
+    .bubbles7,
+    .bubbles8,
+  ) {
+  position: absolute;
+  border-radius: 50%;
+  background: linear-gradient(to bottom, #9b14fa, #c762e5);
+  filter: blur(3px);
+  -webkit-animation-name: bubbleMover;
+          animation-name: bubbleMover;
+  -webkit-animation-timing-function: linear;
+          animation-timing-function: linear;
+  -webkit-animation-iteration-count: infinite;
+          animation-iteration-count: infinite;
+}
+.bubbles1 {
+  width: 250px;
+  height: 250px;
+  top: 5%;
+  left: 55%;
+  -webkit-animation-duration: 8s;
+          animation-duration: 8s;
+  -webkit-perspective: 150px;
+          perspective: 150px;
+}
+
+.bubbles2 {
+  width: 125px;
+  height: 125px;
+  top: 36%;
+  left: 62%;
+  -webkit-animation-duration: 10s;
+          animation-duration: 10s;
+  -webkit-perspective: 85px;
+          perspective: 85px;
+}
+
+.bubbles3 {
+  width: 110px;
+  height: 110px;
+  bottom: 35%;
+  left: 66%;
+  -webkit-animation-duration: 7s;
+          animation-duration: 7s;
+  -webkit-perspective: 85px;
+          perspective: 85px;
+}
+
+.bubbles4 {
+  width: 90px;
+  height: 90px;
+  top: 65%;
+  left: 63%;
+  -webkit-animation-duration: 12s;
+          animation-duration: 12s;
+  -webkit-perspective: 85px;
+          perspective: 85px;
+}
+.bubbles5 {
+  width: 80px;
+  height: 80px;
+  top: 76%;
+  left: 66%;
+  -webkit-animation-duration: 10s;
+          animation-duration: 10s;
+  -webkit-perspective: 85px;
+          perspective: 85px;
+}
+.bubbles6 {
+  width: 80px;
+  height: 80px;
+  top: 85%;
+  left: 75%;
+  -webkit-animation-duration: 10s;
+          animation-duration: 10s;
+  -webkit-perspective: 85px;
+          perspective: 85px;
+}
+.bubbles7 {
+  width: 80px;
+  height: 80px;
+  top: 83%;
+  left: 60%;
+  -webkit-animation-duration: 7s;
+          animation-duration: 7s;
+  -webkit-perspective: 85px;
+          perspective: 85px;
+}
+.bubbles8 {
+  width: 80px;
+  height: 80px;
+  top: 90%;
+  left: 55%;
+  -webkit-animation-duration: 12s;
+          animation-duration: 12s;
+  -webkit-perspective: 85px;
+          perspective: 85px;
+}
+
+@-webkit-keyframes bubbleMover {
+  0% {
+    -webkit-transform: translateY(0px) translateX(0) rotate(0);
+            transform: translateY(0px) translateX(0) rotate(0);
+  }
+  50% {
+    -webkit-transform: translateY(50px) translateX(100px) rotate(45deg);
+            transform: translateY(50px) translateX(100px) rotate(45deg);
+    -webkit-transform-origin: right bottom;
+            transform-origin: right bottom;
+  }
+  100% {
+    -webkit-transform: translateY(0px) translateX(0) rotate(0);
+            transform: translateY(0px) translateX(0) rotate(0);
+    -webkit-transform-origin: center center;
+            transform-origin: center center;
+  }
+}
+
+@keyframes bubbleMover {
+  0% {
+    -webkit-transform: translateY(0px) translateX(0) rotate(0);
+            transform: translateY(0px) translateX(0) rotate(0);
+  }
+  50% {
+    -webkit-transform: translateY(50px) translateX(100px) rotate(45deg);
+            transform: translateY(50px) translateX(100px) rotate(45deg);
+    -webkit-transform-origin: right bottom;
+            transform-origin: right bottom;
+  }
+  100% {
+    -webkit-transform: translateY(0px) translateX(0) rotate(0);
+            transform: translateY(0px) translateX(0) rotate(0);
+    -webkit-transform-origin: center center;
+            transform-origin: center center;
+  }
+}
+
+.formcontainer {
+  width: 35%;
+  margin: auto;
+  padding-top: 30rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: "Roboto", sans-serif;
+}
+
+.formcontainer h1 {
+  font-size: 35px;
+  font-weight: 700;
+  margin-top: 0;
+}
+
+.formcontainer form {
+  padding: 40px;
+  border-radius: 30px;
+  position: absolute;
+  z-index: 9;
+  background: linear-gradient(282.91deg, rgba(137, 207, 240, 0.42) 3.74%, rgba(255, 251, 251, 0.42) 96.34%);
+  backdrop-filter: blur(10px);
+}
+
+.inputBox :is(input, textarea) {
+  font-size: 20px;
+  width: 100%;
+  padding: 12px;
+  margin: 8px 0;
+  margin-bottom: 10px;
+  border: 2px solid white;
+  border-radius: 8px;
+  background-color: transparent;
+}
+.inputBox select {
+  font-size: 20px;
+  width: 100%;
+  padding: 12px;
+  margin: 8px 0;
+  margin-bottom: 10px;
+  border: 2px solid white;
+  border-radius: 8px;
+  background: transparent;
+}
+
+/* Chrome, Firefox, Opera, Safari 10.1+ */
+.inputBox input::placeholder {
+  color: white;
+  opacity: 80%;
+}
+
+/* Internet Explorer 10-11 */
+.inputBox input:-ms-input-placeholder {
+  color: white;
+  opacity: 80%;
+}
+
+/* Microsoft Edge */
+.inputBox input::-ms-input-placeholder {
+  color: white;
+  opacity: 80%;
+}
+
+.inputBox textarea::placeholder {
+  color: white;
+  opacity: 80%;
+}
+
+.inputBox textarea:-ms-input-placeholder {
+  color: white;
+  opacity: 80%;
+}
+
+.inputBox textarea::-ms-input-placeholder {
+  color: white;
+  opacity: 80%;
+}
+
+.inputBox input[type="submit"] {
+  width: 25%;
+  background-color: #aa3dfd;
+  border: 2px solid #aa3dfd;
+  padding: 14px 20px;
+  margin: 8px 0 0 26.5rem;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.inputBox input[type="submit"]:hover {
+  background-color: #8430c4;
+  border: 2px solid #8430c4;
+}
+
+.flexBox {
+  display: flex;
+}
+
+.flexBox1 {
+  margin-right: 20px;
+  margin-bottom: 20px;
+}

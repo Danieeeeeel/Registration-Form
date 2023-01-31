@@ -1,0 +1,202 @@
+.container
+  :is(
+    .bubble1,
+    .bubble2,
+    .bubble3,
+    .bubble4,
+    .bubble5,
+    .bubble6,
+    .bubble7,
+    .bubble8
+  ) {
+  border-radius: 50%;
+  filter: blur(3px);
+  position: absolute;
+  z-index: 3;
+}
+
+.bubble1 {
+  width: 297px;
+  height: 266px;
+  left: 97rem;
+  top: 2rem;
+}
+
+.bubble2 {
+  width: 157px;
+  height: 140px;
+  left: 100.5rem;
+  top: 19.5rem;
+}
+
+.bubble3 {
+  width: 141px;
+  height: 130px;
+  left: 104rem;
+  top: 28.5rem;
+}
+
+.container :is(.bubble4, .bubble6) {
+  width: 115px;
+  height: 114px;
+}
+
+.bubble4 {
+  left: 102rem;
+  top: 37rem;
+}
+
+.bubble5 {
+  width: 110px;
+  height: 93px;
+  left: 104rem;
+  bottom: 10rem;
+}
+
+.bubble6 {
+  left: 110rem;
+  bottom: 3rem;
+}
+
+.bubble7 {
+  width: 90px;
+  height: 89px;
+  left: 100rem;
+  bottom: 0rem;
+}
+
+.bubble8 {
+  width: 65px;
+  height: 65px;
+  left: 105rem;
+  bottom: 5rem;
+}
+.bubbles {
+  position: relative;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: top center;
+  }
+.containers
+  :is(
+    .bubbles1,
+    .bubbles2,
+    .bubbles3,
+    .bubbles4
+  ) {
+  position: absolute;
+  border-radius: 50%;
+  background: linear-gradient(to bottom, #9b14fa, #c762e5);
+  -webkit-animation-name: bubbleMover;
+          animation-name: bubbleMover;
+  -webkit-animation-timing-function: linear;
+          animation-timing-function: linear;
+  -webkit-animation-iteration-count: infinite;
+          animation-iteration-count: infinite;
+}
+
+.bubbles1 {
+  width: 143px;
+  height: 143px;
+  top: 5%;
+  left: 3%;
+  -webkit-animation-duration: 8s;
+          animation-duration: 8s;
+  -webkit-perspective: 150px;
+          perspective: 150px;
+}
+
+.bubbles2 {
+  width: 85px;
+  height: 85px;
+  top: 12%;
+  left: 37%;
+  -webkit-animation-duration: 10s;
+          animation-duration: 10s;
+  -webkit-perspective: 85px;
+          perspective: 85px;
+}
+
+.bubbles3 {
+  width: 85px;
+  height: 85px;
+  bottom: 12%;
+  left: 6%;
+  -webkit-animation-duration: 7s;
+          animation-duration: 7s;
+  -webkit-perspective: 85px;
+          perspective: 85px;
+}
+
+.bubbles4 {
+  width: 85px;
+  height: 85px;
+  top: 20%;
+  right: 4%;
+  -webkit-animation-duration: 12s;
+          animation-duration: 12s;
+  -webkit-perspective: 85px;
+          perspective: 85px;
+}
+
+@-webkit-keyframes bubbleMover {
+  0% {
+    -webkit-transform: translateY(0px) translateX(0) rotate(0);
+            transform: translateY(0px) translateX(0) rotate(0);
+  }
+  30% {
+    -webkit-transform: translateY(30px) translateX(50px) rotate(15deg);
+            transform: translateY(30px) translateX(50px) rotate(15deg);
+    -webkit-transform-origin: center center;
+            transform-origin: center center;
+  }
+  50% {
+    -webkit-transform: translateY(50px) translateX(100px) rotate(45deg);
+            transform: translateY(50px) translateX(100px) rotate(45deg);
+    -webkit-transform-origin: right bottom;
+            transform-origin: right bottom;
+  }
+  80% {
+    -webkit-transform: translateY(30px) translateX(50px) rotate(15deg);
+            transform: translateY(30px) translateX(50px) rotate(15deg);
+    -webkit-transform-origin: left top;
+            transform-origin: left top;
+  }
+  100% {
+    -webkit-transform: translateY(0px) translateX(0) rotate(0);
+            transform: translateY(0px) translateX(0) rotate(0);
+    -webkit-transform-origin: center center;
+            transform-origin: center center;
+  }
+}
+
+@keyframes bubbleMover {
+  0% {
+    -webkit-transform: translateY(0px) translateX(0) rotate(0);
+            transform: translateY(0px) translateX(0) rotate(0);
+  }
+  30% {
+    -webkit-transform: translateY(30px) translateX(50px) rotate(15deg);
+            transform: translateY(30px) translateX(50px) rotate(15deg);
+    -webkit-transform-origin: center center;
+            transform-origin: center center;
+  }
+  50% {
+    -webkit-transform: translateY(50px) translateX(100px) rotate(45deg);
+            transform: translateY(50px) translateX(100px) rotate(45deg);
+    -webkit-transform-origin: right bottom;
+            transform-origin: right bottom;
+  }
+  80% {
+    -webkit-transform: translateY(30px) translateX(50px) rotate(15deg);
+            transform: translateY(30px) translateX(50px) rotate(15deg);
+    -webkit-transform-origin: left top;
+            transform-origin: left top;
+  }
+  100% {
+    -webkit-transform: translateY(0px) translateX(0) rotate(0);
+            transform: translateY(0px) translateX(0) rotate(0);
+    -webkit-transform-origin: center center;
+            transform-origin: center center;
+  }
+}
